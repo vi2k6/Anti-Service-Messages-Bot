@@ -2,9 +2,9 @@ from config import Config
 from pyrogram import Client, filters
 
 tgbot = Client(
-  bot_token=Config.BOT_TOKEN,
-  api_id=Config.API_ID,
-  api_hash=Config.API_HASH,
+  bot_token=os.environ.get["BOT_TOKEN"],
+  api_id=int(os.environ.get["API_ID"]),
+  api_hash=os.environ.get["API_HASH"],
   )
 
 
