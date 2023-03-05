@@ -1,7 +1,7 @@
 {
     "name": "Anti-Service-Bot",
     "description": "A Modular telegram bot to dete service messages in groups/channels automatically..",
-    "repository": "https://github.com/vivek2k6/Delete-Service-Messages-Bot",
+    "repository": "https://github.com/vivek2k6/Anti-Service-Messages-Bot",
     "keywords": [
        
         "telegram bot",
