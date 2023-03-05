@@ -1,14 +1,14 @@
 import os
-from config import Config
 from pyrogram import Client, filters
 
 tgbot = Client(
-  bot_token=os.environ.get["BOT_TOKEN"],
-  api_id=int(os.environ.get["API_ID"]),
-  api_hash=os.environ.get["API_HASH"],
-  )
+    "Delete-Service-Messages-Bot",
+    bot_token=os.environ["BOT_TOKEN"],
+    api_id=int(os.environ["API_ID"]),
+    api_hash=os.environ["API_HASH"],
+)
 
-
+btname = os.environ["BOT_USERNAME"]
 service_filter = filters.service
 
 
@@ -31,5 +31,11 @@ def start(client, message):
 async def delete_service_message(client, message):
     # Delete service message
     await client.delete_messages(chat_id=message.chat.id, message_ids=message.message_id)
+
+print(
+    """
+Bot {btname} Started!!!
+"""
+)
 
 tgbot.run()
