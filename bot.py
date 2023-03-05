@@ -5,9 +5,9 @@ from pyrogram.errors import ChatAdminRequired
 # create a Pyrogram client
 app = Client(
     "Anti-Service-Messages-Bot",
-    bot_token=os.environ.get["BOT_TOKEN"],
-    api_id=int(os.environ.get["API_ID"]),
-    api_hash=os.environ.get["API_HASH"],
+    bot_token=os.environ.get("BOT_TOKEN"),
+    api_id=int(os.environ.get("API_ID")),
+    api_hash=os.environ.get("API_HASH"),
     )
 
 # define a function to send a message when a user sends /start command
