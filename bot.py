@@ -1,5 +1,5 @@
 import os
-inport logging
+import logging
 from pyrogram import Client, filters
 
 tgbot = Client(
