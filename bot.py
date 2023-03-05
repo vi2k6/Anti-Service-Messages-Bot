@@ -1,7 +1,8 @@
 import telebot
+import os
 from telebot import types
 
-bot = telebot.TeleBot(int(os.environ.get["BOT_TOKEN"]))
+bot = telebot.TeleBot(os.environ.get["BOT_TOKEN"])
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
