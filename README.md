@@ -4,7 +4,12 @@ This Bot Help You To Delete Service Messages In Groups or Channels automatically
 ### How to deploy
 Easy Way : **Heroku**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vivek2k6/Delete-Service-Messages-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vivek2k6/Anti-Service-Messages-Bot)
+
+Hard Way :.**VPS**
+```
+git clone https://github.com/vivek2k6/Anti-Service-Messages-Bot
+```
 
 ### Licence
 ```Licence of This Repo
