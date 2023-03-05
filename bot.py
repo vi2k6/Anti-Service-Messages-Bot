@@ -1,4 +1,5 @@
 import os
+inport logging
 from pyrogram import Client, filters
 
 tgbot = Client(
@@ -25,7 +26,7 @@ async def welcome(client, message):
 
 @tgbot.on_message(filters.text)
 def start(client, message):
-    client.send_message(message.chat.id, "Hi, This is a anti service bot.Just Add Me To Your Group By [Clicking Here](http://t.me/{Config.BOT_USERNAME}?startgroup=botstart) Then I Will delete all berfore and after service messages in the group.")
+    client.send_message(message.chat.id, "Hi, This is a anti service bot.Just Add Me To Your Group By [Clicking Here](http://t.me/{btname}?startgroup=botstart) Then I Will delete all berfore and after service messages in the group.")
 
 @tgbot.on_message(service_filter)
 async def delete_service_message(client, message):
