@@ -1,15 +1,24 @@
-import telebot
-import os
-from telebot import types
+from pyrogram import Client, filters
+from pyrogram.errors import ChatAdminRequired
 
-bot = telebot.TeleBot(os.environ.get["BOT_TOKEN"])
+# create a Pyrogram client
+app = Client()
 
-@bot.message_handler(commands=['start'])
-def send_welcome(message):
-    bot.reply_to(message,'👋 Hello, This Bot Help you To Delete Service Messages In Groups/Channels.just add Me To Your group Or Channel As Admin With Delete Messages Permission')
+# define a function to send a message when a user sends /start command
+@app.on_message(filters.command(["start"]))
+def start_command(client, message):
+    # send a message to the user who initiated the command
+    client.send_message(chat_id=message.chat.id, text="Hello, Nice To Meet You!")
 
-@bot.message_handler(content_types=['service'])
-def delete_service_messages(message):
-    bot.delete_message(message.chat.id, message.message_id)
+# define a function to delete service messages in groups
+@app.on_message(filters.service)
+def delete_service_messages(client, message):
+    try:
+        # delete the service message
+        client.delete_messages(chat_id=message.chat.id, message_ids=message.message_id)
+    except ChatAdminRequired:
+        # if the bot is not an admin in the group, catch the error and print a message
+        print("I am not an admin in this group!")
 
-bot.polling()
+# start the Pyrogram client
+app.run()
