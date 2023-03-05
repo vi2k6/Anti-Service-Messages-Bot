@@ -1,8 +1,33 @@
 {
-  "env": {
-    "BOT_TOKEN": "your_bot_token_here",
-    "API_ID": "your_api_id_here",
-    "API_HASH": "your_api_hash_here",
-    "BOT_USERNAME": "your_bot_username_here"
-  }
+    "name": "Anti-Service-Bot",
+    "description": "A Modular telegram bot to dete service messages in groups/channels automatically..",
+    "repository": "https://github.com/vivek2k6/Delete-Service-Messages-Bot",
+    "keywords": [
+       
+        "telegram bot",
+        "pyrogram"
+
+    ],
+    "env": {
+        API_ID": {
+            "description": "Get this value from my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "ID of the message to edit.",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+        }
+    ]
 }
