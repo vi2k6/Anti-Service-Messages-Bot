@@ -6,7 +6,7 @@ Easy Way : **Heroku**
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vivek2k6/Anti-Service-Messages-Bot)
 
-Hard Way :.**VPS**
+Hard Way : **VPS**
 ```
 git clone https://github.com/vivek2k6/Anti-Service-Messages-Bot
 ```
