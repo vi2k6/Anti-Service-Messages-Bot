@@ -17,8 +17,12 @@
             "description": "Get this value from my.telegram.org",
             "value": ""
         },
+        "BOT_USERNAME": {
+            "description": "username of your bot",
+            "value": ""
+        },
         "BOT_TOKEN": {
-            "description": "ID of the message to edit.",
+            "description": "Bot Token Get From @Botfather.",
             "value": ""
         }
     },
