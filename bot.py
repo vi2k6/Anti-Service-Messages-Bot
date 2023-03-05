@@ -11,10 +11,10 @@ app = Client(
     )
 
 # define a function to send a message when a user sends /start command
-@app.on_message(filters.command(["start"]))
+@app.on_message(filters.text)
 def start_command(client, message):
     # send a message to the user who initiated the command
-    client.send_message(chat_id=message.chat.id, text="Hello, Nice To Meet You!")
+    client.send_message(chat_id=message.chat.id, text="Hello, I can delete all service messages in groups/channels.Just Add Me To Your Group/Channel!")
 
 # define a function to delete service messages in groups
 @app.on_message(filters.service)
