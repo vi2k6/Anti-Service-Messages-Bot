@@ -7,7 +7,8 @@ Easy Way : **Heroku**
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vivek2k6/Delete-Service-Messages-Bot)
 
 ### Licence
-```Copyright (c) 2023 Vivek Tp
+```Licence of This Repo
+Copyright (c) 2023 Vivek Tp
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
