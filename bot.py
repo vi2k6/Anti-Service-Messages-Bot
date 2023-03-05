@@ -21,7 +21,7 @@ def start_command(client, message):
 def delete_service_messages(client, message):
     try:
         # delete the service message
-        client.delete_messages(chat_id=message.chat.id, message_ids=message.message.id)
+        client.delete_messages(chat_id=message.chat.id, message_ids=message.id)
     except ChatAdminRequired:
         # if the bot is not an admin in the group, catch the error and print a message
         print("I am not an admin in this group!")
