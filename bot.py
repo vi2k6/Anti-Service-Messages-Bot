@@ -7,7 +7,7 @@ app = Client(
     "Anti-Service-Messages-Bot",
     api_id=int(os.environ.get["API_ID"]),
     api_hash=os.environ.get["API_HASH"],
-    bot_token=os.environ.get["BOT_TOKEN"]
+    bot_token=os.environ.get["BOT_TOKEN"],
     )
 
 # define a function to send a message when a user sends /start command
