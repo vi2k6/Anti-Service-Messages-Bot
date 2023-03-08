@@ -10,21 +10,16 @@ app = Client(
     api_hash=os.environ.get("API_HASH"),
     )
 
-# define a function to send a message when a user sends /start command
 @app.on_message(filters.text)
 def start_command(client, message):
     # send a message to the user who initiated the command
     client.send_message(chat_id=message.chat.id, text="Hello, I can delete all service messages in groups/channels.Just Add Me To Your Group/Channel!")
 
-# define a function to delete service messages in groups
 @app.on_message(filters.service)
 def delete_service_messages(client, message):
     try:
-        # delete the service message
         client.delete_messages(chat_id=message.chat.id, message_ids=message.id)
     except ChatAdminRequired:
-        # if the bot is not an admin in the group, catch the error and print a message
         print("I am not an admin in this group!")
 
-# start the Pyrogram client
 app.run()
