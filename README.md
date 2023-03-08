@@ -1,6 +1,10 @@
 ### Delete-Service-Messages-Bot
 This Bot Help You To Delete Service Messages In Groups or Channels automatically.
 
+### Features:
+- Deletes all service messages.
+- Simple To Use.
+
 ### How to deploy
 Easy Ways : **Heroku**
 
