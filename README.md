@@ -19,3 +19,7 @@ git clone https://github.com/vivek2k6/Anti-Service-Messages-Bot
 ```
 
 ### Licence
+[MIT Licence](https://github.com/vivek2k6/Anti-Service-Messages-Bot/blob/main/LICENSE)
+
+### Credits
+[Me](https://github.com/vivek2k6)
