@@ -1,6 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # create a Pyrogram client
 app = Client(
@@ -13,7 +14,8 @@ app = Client(
 @app.on_message(filters.text)
 def start_command(client, message):
     # send a message to the user who initiated the command
-    client.send_message(chat_id=message.chat.id, text="Hello, I can delete all service messages in groups/channels.Just Add Me To Your Group/Channel!")
+    client.send_message(chat_id=message.chat.id, text="Hello, I can delete all service messages in groups/channels.Just Add Me To Your Group/Channel!"),
+    reply_markup=InlineKeyboardButton([[InlineKeyboardButton("Updates", url="https://myownbots.t.me")]])
 
 @app.on_message(filters.service)
 def delete_service_messages(client, message):
